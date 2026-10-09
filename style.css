@@ -675,3 +675,43 @@ img {
         bottom: 15px;
     }
 }
+```css
+/* PREMIUM LOGO AND BRAND TEXT */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.logo-text h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #17324d;
+}
+
+.logo-text h2 span {
+    color: #e87524;
+}
+
+.logo-text p {
+    margin: 4px 0;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+.logo-text small {
+    font-size: 10px;
+    color: #e87524;
+    font-weight: 600;
+}
