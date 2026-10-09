@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,26 +12,25 @@
         content="Daksha House Paint Service provides professional interior, exterior, texture and waterproof painting services in Gurugram.">
 
     <link rel="stylesheet" href="style.css">
-    
 </head>
-
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-
+    <!-- HEADER -->
     <header class="header">
 
-<div class="logo">
-    <img src="images/logo.png" alt="Daksha House Paint Service Logo">
+        <div class="logo">
+            <img src="images/logo.png"
+                 alt="Daksha House Paint Service Logo">
 
-    <div class="logo-text">
-        <h2>DAKSHA <span>PAINTS</span></h2>
-        <p>HOUSE PAINT SERVICE</p>
-        <small>✨ Transforming Homes in Gurugram</small>
-    </div>
-</div>
-```
+            <div class="logo-text">
+                <h2>DAKSHA <span>PAINTS</span></h2>
+                <p>HOUSE PAINT SERVICE</p>
+                <small>✨ Transforming Homes in Gurugram</small>
+            </div>
+        </div>
+
+        <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
             <a href="#projects">Projects</a>
@@ -45,9 +44,7 @@
 
     </header>
 
-
-    <!-- ================= HERO SECTION ================= -->
-
+    <!-- HERO SECTION -->
     <section id="home" class="hero">
 
         <div class="hero-content">
@@ -62,26 +59,24 @@
             </h1>
 
             <p>
-                Premium interior & exterior painting services
+                Premium interior &amp; exterior painting services
                 with professional finishing and quality materials.
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#contact" class="btn primary-btn">
                     Get Free Quote
                 </a>
 
                 <a href="https://wa.me/919560165748"
-                    class="btn whatsapp-btn"
-                    target="_blank">
+                   class="btn whatsapp-btn"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     WhatsApp Us
                 </a>
-
             </div>
 
             <div class="hero-info">
-
                 <div>
                     <strong>100+</strong>
                     <span>Projects</span>
@@ -96,55 +91,45 @@
                     <strong>Gurugram</strong>
                     <span>Service Area</span>
                 </div>
-
             </div>
 
         </div>
 
     </section>
 
-
-    <!-- ================= SERVICES ================= -->
-
+    <!-- SERVICES -->
     <section id="services" class="section">
 
         <div class="section-heading">
-
             <p>WHAT WE DO</p>
-
             <h2>Our Painting Services</h2>
-
             <span>
                 Complete painting solutions for your home,
                 office and commercial spaces.
             </span>
-
         </div>
-
 
         <div class="services-grid">
 
             <div class="service-card">
-    <img src="images/interior.jpg" alt="Interior Painting">
+                <img src="images/interior.jpg"
+                     alt="Interior Painting">
+                <h3>Interior Painting</h3>
+                <p>
+                    Beautiful and smooth interior wall painting
+                    for bedrooms, halls and complete homes.
+                </p>
+            </div>
 
-    <h3>Interior Painting</h3>
-
-    <p>
-        Beautiful and smooth interior wall painting
-        for bedrooms, halls and complete homes.
-    </p>
-</div>
-
-           <div class="service-card">
-    <img src="images/exterior.jpg" alt="Exterior Painting">
-
-    <h3>Exterior Painting</h3>
-
-    <p>
-        Long-lasting exterior painting with
-        professional finishing.
-    </p>
-</div>
+            <div class="service-card">
+                <img src="images/exterior.jpg"
+                     alt="Exterior Painting">
+                <h3>Exterior Painting</h3>
+                <p>
+                    Long-lasting exterior painting with
+                    professional finishing.
+                </p>
+            </div>
 
             <div class="service-card">
                 <div class="service-icon">✨</div>
@@ -166,7 +151,7 @@
 
             <div class="service-card">
                 <div class="service-icon">🖌️</div>
-                <h3>Putty & Primer</h3>
+                <h3>Putty &amp; Primer</h3>
                 <p>
                     Professional surface preparation for
                     a smooth and durable paint finish.
@@ -186,9 +171,7 @@
 
     </section>
 
-
-    <!-- ================= WHY CHOOSE US ================= -->
-
+    <!-- WHY CHOOSE US -->
     <section class="why-us" id="about">
 
         <div class="why-image">
@@ -196,7 +179,6 @@
         </div>
 
         <div class="why-content">
-
             <p class="section-label">WHY CHOOSE US</p>
 
             <h2>
@@ -211,7 +193,6 @@
             </p>
 
             <div class="features">
-
                 <div>
                     <strong>✓</strong>
                     <span>Experienced Painters</span>
@@ -231,28 +212,20 @@
                     <strong>✓</strong>
                     <span>On-Time Completion</span>
                 </div>
-
             </div>
-
         </div>
 
     </section>
 
-
-    <!-- ================= PROJECTS ================= -->
-
+    <!-- PROJECTS -->
     <section id="projects" class="section">
 
         <div class="section-heading">
-
             <p>OUR WORK</p>
-
             <h2>Our Recent Projects</h2>
-
             <span>
                 Some of our professional painting work in Gurugram.
             </span>
-
         </div>
 
         <div class="services-grid">
@@ -288,129 +261,84 @@
 
     </section>
 
+    <!-- CONTACT FORM -->
+    <section id="contact" class="section contact-section">
 
+        <div class="section-heading">
+            <p>GET IN TOUCH</p>
+            <h2>Get Your Free Painting Quote</h2>
+            <span>
+                Fill the form below to send your painting
+                requirement directly to us on WhatsApp.
+            </span>
+        </div>
 
+        <div class="contact-box">
+            <h3>Get Your Free Quote</h3>
 
-    
-<!-- ================= CONTACT ================= -->
+            <form id="quoteForm">
 
-<section id="contact" class="section contact-section">
+                <input type="text"
+                       id="name"
+                       placeholder="Your Name"
+                       required>
 
-    <div class="section-heading">
+                <input type="tel"
+                       id="phone"
+                       placeholder="Mobile Number"
+                       required>
 
-        <p>GET IN TOUCH</p>
+                <select id="property" required>
+                    <option value="">Select Property Type</option>
+                    <option>House</option>
+                    <option>Flat / Apartment</option>
+                    <option>Office</option>
+                    <option>Shop</option>
+                    <option>Commercial Property</option>
+                </select>
 
-        <h2>Get Your Free Painting Quote</h2>
+                <select id="service" required>
+                    <option value="">Select Painting Service</option>
+                    <option>Interior Painting</option>
+                    <option>Exterior Painting</option>
+                    <option>Wall Texture</option>
+                    <option>Waterproofing</option>
+                    <option>Putty &amp; Primer</option>
+                    <option>Wood Polish</option>
+                </select>
 
-        <span>
-            Fill the form below and send your painting requirement
-            directly to us on WhatsApp.
-        </span>
+                <input type="text"
+                       id="location"
+                       placeholder="Your Location"
+                       required>
 
-    </div>
+                <input type="date"
+                       id="date"
+                       required>
 
+                <select id="time" required>
+                    <option value="">Select Preferred Time</option>
+                    <option>9:00 AM - 11:00 AM</option>
+                    <option>11:00 AM - 1:00 PM</option>
+                    <option>2:00 PM - 4:00 PM</option>
+                    <option>4:00 PM - 6:00 PM</option>
+                </select>
 
-    <div class="contact-box">
+                <textarea id="message"
+                          rows="4"
+                          placeholder="Tell us about your painting requirement"></textarea>
 
-        <h3>Get Your Free Quote</h3>
+                <button type="submit">
+                    Get Free Quote on WhatsApp
+                </button>
 
-        <form id="quoteForm">
+            </form>
+        </div>
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                required
-            >
+    </section>
 
-            <input
-                type="tel"
-                id="phone"
-                placeholder="Mobile Number"
-                required
-            >
-
-            <select id="property" required>
-
-                <option value="">
-                    Select Property Type
-                </option>
-
-                <option>House</option>
-                <option>Flat / Apartment</option>
-                <option>Office</option>
-                <option>Shop</option>
-                <option>Commercial Property</option>
-
-            </select>
-
-
-            <select id="service" required>
-
-                <option value="">
-                    Select Painting Service
-                </option>
-
-                <option>Interior Painting</option>
-                <option>Exterior Painting</option>
-                <option>Wall Texture</option>
-                <option>Waterproofing</option>
-                <option>Putty & Primer</option>
-                <option>Wood Polish</option>
-
-            </select>
-
-
-            <input
-                type="text"
-                id="location"
-                placeholder="Your Location"
-                required
-            >
-
-
-            <input
-                type="date"
-                id="date"
-                required
-            >
-
-
-            <select id="time" required>
-
-                <option value="">
-                    Select Preferred Time
-                </option>
-
-                <option>9:00 AM - 11:00 AM</option>
-                <option>11:00 AM - 1:00 PM</option>
-                <option>2:00 PM - 4:00 PM</option>
-                <option>4:00 PM - 6:00 PM</option>
-
-            </select>
-
-
-            <textarea
-                id="message"
-                rows="4"
-                placeholder="Tell us about your painting requirement"
-            ></textarea>
-
-
-            <button type="submit">
-                Get Free Quote on WhatsApp
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
-
-    <!-- ================= FOOTER ================= -->
-
+    <!-- FOOTER -->
     <footer>
-
         <h3>DAKSHA HOUSE PAINT SERVICE</h3>
 
         <p>
@@ -420,43 +348,72 @@
         <p>
             © 2026 Daksha House Paint Service. All Rights Reserved.
         </p>
-
     </footer>
-<script>
 
-document.getElementById("quoteForm").addEventListener("submit", function(event) {
+    <!-- WHATSAPP FORM SCRIPT -->
+    <script>
+        document.getElementById("quoteForm").addEventListener(
+            "submit",
+            function (event) {
+                event.preventDefault();
 
-    event.preventDefault();
+                const name = document.getElementById("name").value.trim();
+                const phone = document.getElementById("phone").value.trim();
+                const property = document.getElementById("property").value;
+                const service = document.getElementById("service").value;
+                const location = document.getElementById("location").value.trim();
+                const date = document.getElementById("date").value;
+                const time = document.getElementById("time").value;
+                const message = document.getElementById("message").value.trim();
 
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let property = document.getElementById("property").value;
-    let service = document.getElementById("service").value;
-    let location = document.getElementById("location").value;
-    let date = document.getElementById("date").value;
-    let time = document.getElementById("time").value;
-    let message = document.getElementById("message").value;
+                const whatsappMessage =
+                    "Hello Daksha House Paint Service,\n\n" +
+                    "New Free Quote Request\n\n" +
+                    "Name: " + name + "\n" +
+                    "Mobile: " + phone + "\n" +
+                    "Property: " + property + "\n" +
+                    "Service: " + service + "\n" +
+                    "Location: " + location + "\n" +
+                    "Preferred Date: " + date + "\n" +
+                    "Preferred Time: " + time + "\n" +
+                    "Requirement: " + message;
 
-    let whatsappMessage =
-        "Hello Daksha House Paint Service,\n\n" +
-        "New Free Quote Request\n\n" +
-        "Name: " + name + "\n" +
-        "Mobile: " + phone + "\n" +
-        "Property: " + property + "\n" +
-        "Service: " + service + "\n" +
-        "Location: " + location + "\n" +
-        "Preferred Date: " + date + "\n" +
-        "Preferred Time: " + time + "\n" +
-        "Requirement: " + message;
+                const whatsappURL =
+                    "https://wa.me/919560165748?text=" +
+                    encodeURIComponent(whatsappMessage);
 
-    let whatsappURL =
-        "https://wa.me/919560165748?text=" +
-        encodeURIComponent(whatsappMessage);
+                window.location.href = whatsappURL;
+            }
+        );
+    </script>
 
-    window.location.href = whatsappURL;
+    <!-- FIREBASE CONNECTION -->
+    <script type="module">
+        import { initializeApp }
+            from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
 
-});
+        import { getAnalytics }
+            from "https://www.gstatic.com/firebasejs/13.0.0/firebase-analytics.js";
 
-</script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD2IVXdTCcApE4cnKNPDZb19dUfVQQ_HA4",
+            authDomain: "dakshahousepainters.firebaseapp.com",
+            projectId: "dakshahousepainters",
+            storageBucket: "dakshahousepainters.firebasestorage.app",
+            messagingSenderId: "553629091292",
+            appId: "1:553629091292:web:d524e7df63b9c133e2fb19",
+            measurementId: "G-HNMBZMDP3V"
+        };
+
+        const app = initializeApp(firebaseConfig);
+
+        try {
+            getAnalytics(app);
+            console.log("Firebase initialized.");
+        } catch (error) {
+            console.error("Firebase Analytics error:", error);
+        }
+    </script>
+
 </body>
 </html>
