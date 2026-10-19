@@ -62,6 +62,10 @@ const shadeGrid = document.getElementById("shadeGrid");
 const shadeCount = document.getElementById("shadeCount");
 const noResults = document.getElementById("noResults");
 const whatsappEnquiry = document.getElementById("whatsappEnquiry");
+const selectedShadePanel = document.getElementById("selectedShadePanel");
+const selectedShadeName = document.getElementById("selectedShadeName");
+const selectedShadeDetails = document.getElementById("selectedShadeDetails");
+const clearSelection = document.getElementById("clearSelection");
 
 let selectedShade = null;
 
@@ -80,9 +84,9 @@ function renderShades() {
     });
 
     shadeCount.textContent =
-        `Is collection mein ${filteredShades.length} shades dikh rahe hain.`;
+        `Is collection mein ${filteredShades.length} shades dikh rahe hain. Total loaded entries: ${shades.length}.`;
 
-    shadeGrid.innerHTML = "";
+    shadeGrid.replaceChildren();
     noResults.hidden = filteredShades.length !== 0;
 
     filteredShades.forEach(shade => {
@@ -93,6 +97,7 @@ function renderShades() {
         swatch.className = "shade-swatch";
         swatch.style.backgroundColor = shade.hex;
         swatch.title = "Approximate screen preview";
+        swatch.setAttribute("aria-label", `Approximate colour preview for ${shade.name}`);
 
         const info = document.createElement("div");
         info.className = "shade-info";
@@ -113,10 +118,15 @@ function renderShades() {
 
         const selectButton = document.createElement("button");
         selectButton.type = "button";
-        selectButton.textContent = "Select Colour";
+        selectButton.textContent =
+            selectedShade === shade ? "Selected ✓" : "Select Colour";
+
         selectButton.addEventListener("click", () => {
             selectedShade = shade;
+            updateSelectedShade();
             updateWhatsApp();
+            renderShades();
+
             document.querySelector(".colour-enquiry").scrollIntoView({
                 behavior: "smooth",
                 block: "center"
@@ -126,6 +136,7 @@ function renderShades() {
         const copyButton = document.createElement("button");
         copyButton.type = "button";
         copyButton.textContent = "Copy Code";
+
         copyButton.addEventListener("click", async () => {
             try {
                 await navigator.clipboard.writeText(shade.code);
@@ -146,12 +157,24 @@ function renderShades() {
     });
 }
 
+function updateSelectedShade() {
+    if (!selectedShade) {
+        selectedShadePanel.hidden = true;
+        return;
+    }
+
+    selectedShadePanel.hidden = false;
+    selectedShadeName.textContent = selectedShade.name;
+    selectedShadeDetails.textContent =
+        `${selectedShade.brand} · Shade Code: ${selectedShade.code}`;
+}
+
 function updateWhatsApp() {
     const phoneNumber = "919560165748";
 
     const shadeDetails = selectedShade
-        ? `Mujhe ye shade pasand aaya:\nBrand: ${selectedShade.brand}\nColour: ${selectedShade.name}\nShade Code: ${selectedShade.code}\n\nIs colour mein painting ka quotation chahiye.`
-        : "Namaste, mujhe ghar ki painting aur colour selection ke liye quotation chahiye.";
+        ? `Namaste Daksha Paints!\nMujhe ye shade pasand aaya:\nBrand: ${selectedShade.brand}\nColour: ${selectedShade.name}\nShade Code: ${selectedShade.code}\n\nIs colour mein painting ka quotation chahiye.`
+        : "Namaste Daksha Paints! Mujhe ghar ki painting aur colour selection ke liye quotation chahiye.";
 
     whatsappEnquiry.href =
         `https://wa.me/${phoneNumber}?text=${encodeURIComponent(shadeDetails)}`;
@@ -160,8 +183,16 @@ function updateWhatsApp() {
 brandSelect.addEventListener("change", renderShades);
 shadeSearch.addEventListener("input", renderShades);
 
+clearSelection.addEventListener("click", () => {
+    selectedShade = null;
+    updateSelectedShade();
+    updateWhatsApp();
+    renderShades();
+});
+
 document.getElementById("currentYear").textContent =
     new Date().getFullYear();
 
+updateSelectedShade();
 updateWhatsApp();
 renderShades();
