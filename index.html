@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,13 +12,244 @@
         content="Daksha House Paint Service provides professional interior, exterior, texture and waterproof painting services in Gurugram.">
 
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* COLOUR CATALOGUE */
+        #colour-catalogue {
+            background: #f7f8fc;
+        }
+
+        #colour-catalogue .catalogue-intro {
+            max-width: 760px;
+            margin: 0 auto 25px;
+            text-align: center;
+            color: #606878;
+            line-height: 1.7;
+        }
+
+        #colour-catalogue .catalogue-filters {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 12px;
+            max-width: 1000px;
+            margin: 0 auto 25px;
+        }
+
+        #colour-catalogue .catalogue-filters input,
+        #colour-catalogue .catalogue-filters select {
+            width: 100%;
+            min-width: 0;
+            padding: 13px;
+            border: 1px solid #d7dbe5;
+            border-radius: 9px;
+            background: #fff;
+            color: #222;
+            font: inherit;
+        }
+
+        #colour-catalogue .catalogue-count {
+            max-width: 1100px;
+            margin: 0 auto 15px;
+            color: #626b7a;
+            font-size: 14px;
+        }
+
+        #colour-catalogue .catalogue-grid {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        #colour-catalogue .catalogue-shade {
+            display: block;
+            min-width: 0;
+            overflow: hidden;
+            padding: 0;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            background: #fff;
+            color: #202434;
+            text-align: left;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .07);
+            transition: transform .2s, border-color .2s;
+        }
+
+        #colour-catalogue .catalogue-shade:hover {
+            transform: translateY(-3px);
+        }
+
+        #colour-catalogue .catalogue-shade.is-selected {
+            border-color: #e87524;
+            box-shadow: 0 0 0 2px rgba(232, 117, 36, .2);
+        }
+
+        #colour-catalogue .catalogue-swatch {
+            display: block;
+            width: 100%;
+            height: 115px;
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+        }
+
+        #colour-catalogue .catalogue-shade-info {
+            display: block;
+            padding: 12px;
+        }
+
+        #colour-catalogue .catalogue-shade-info strong {
+            display: block;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        #colour-catalogue .catalogue-shade-info small {
+            display: block;
+            margin-top: 5px;
+            color: #687080;
+            font-size: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        #colour-catalogue .official-code {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 9px;
+            background: #fff0e4;
+            color: #a74600;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: .5px;
+        }
+
+        #colour-catalogue .catalogue-empty {
+            display: none;
+            padding: 25px;
+            text-align: center;
+            color: #646b78;
+        }
+
+        #colour-catalogue .catalogue-selection {
+            display: grid;
+            grid-template-columns: 120px minmax(0, 1fr);
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+            padding: 22px;
+            border-radius: 14px;
+            background: #fff;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+        }
+
+        #colour-catalogue .catalogue-preview {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #e9e9e9;
+        }
+
+        #colour-catalogue .catalogue-selected-name {
+            margin: 0 0 8px;
+            font-size: 22px;
+            color: #222;
+        }
+
+        #colour-catalogue .catalogue-selected-code {
+            margin-bottom: 14px;
+            color: #626b78;
+            overflow-wrap: anywhere;
+        }
+
+        #colour-catalogue .catalogue-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        #colour-catalogue .catalogue-action {
+            display: inline-block;
+            padding: 12px 16px;
+            border: 0;
+            border-radius: 8px;
+            background: #e87524;
+            color: white;
+            text-decoration: none;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #colour-catalogue .catalogue-action.copy {
+            background: #222d42;
+        }
+
+        #colour-catalogue .catalogue-action.whatsapp {
+            background: #25d366;
+            color: #102b1b;
+        }
+
+        #colour-catalogue .catalogue-status {
+            min-height: 22px;
+            margin-top: 8px;
+            color: #267543;
+            font-size: 13px;
+        }
+
+        #colour-catalogue .catalogue-note {
+            margin-top: 18px;
+            color: #687080;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 850px) {
+            #colour-catalogue .catalogue-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            #colour-catalogue .catalogue-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            #colour-catalogue .catalogue-swatch {
+                height: 90px;
+            }
+
+            #colour-catalogue .catalogue-shade-info {
+                padding: 9px;
+            }
+
+            #colour-catalogue .catalogue-selection {
+                grid-template-columns: 75px minmax(0, 1fr);
+                gap: 12px;
+                padding: 14px;
+            }
+
+            #colour-catalogue .catalogue-preview {
+                width: 75px;
+                height: 85px;
+            }
+
+            #colour-catalogue .catalogue-selected-name {
+                font-size: 18px;
+            }
+
+            #colour-catalogue .catalogue-action {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header class="header">
-
         <div class="logo">
             <img src="images/logo.png"
                  alt="Daksha House Paint Service Logo">
@@ -33,22 +264,18 @@
         <nav>
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="colour-studio.html">🎨 Colour Studio</a>
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
 
-        <a class="header-btn" href="tel:9560165748">
-            Call Now
-        </a>
-
+        <a class="header-btn" href="tel:9560165748">Call Now</a>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section id="home" class="hero">
-
         <div class="hero-content">
-
             <p class="hero-small">
                 🎨 PROFESSIONAL PAINTING SERVICES IN GURUGRAM
             </p>
@@ -81,25 +308,20 @@
                     <strong>100+</strong>
                     <span>Projects</span>
                 </div>
-
                 <div>
                     <strong>5★</strong>
                     <span>Quality Service</span>
                 </div>
-
                 <div>
                     <strong>Gurugram</strong>
                     <span>Service Area</span>
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <!-- SERVICES -->
     <section id="services" class="section">
-
         <div class="section-heading">
             <p>WHAT WE DO</p>
             <h2>Our Painting Services</h2>
@@ -110,10 +332,8 @@
         </div>
 
         <div class="services-grid">
-
             <div class="service-card">
-                <img src="images/interior.jpg"
-                     alt="Interior Painting">
+                <img src="images/interior.jpg" alt="Interior Painting">
                 <h3>Interior Painting</h3>
                 <p>
                     Beautiful and smooth interior wall painting
@@ -122,8 +342,7 @@
             </div>
 
             <div class="service-card">
-                <img src="images/exterior.jpg"
-                     alt="Exterior Painting">
+                <img src="images/exterior.jpg" alt="Exterior Painting">
                 <h3>Exterior Painting</h3>
                 <p>
                     Long-lasting exterior painting with
@@ -166,14 +385,108 @@
                     furniture and wooden surfaces.
                 </p>
             </div>
+        </div>
+    </section>
 
+    <!-- ASIAN PAINTS OFFICIAL SHADE CODES -->
+    <section id="colour-catalogue" class="section">
+
+        <div class="section-heading">
+            <p>FIND YOUR PERFECT SHADE</p>
+            <h2>🎨 Asian Paints Colour Catalogue</h2>
+            <span>
+                Shade ka naam ya official code search karke select karein.
+            </span>
         </div>
 
+        <p class="catalogue-intro">
+            Apni pasand ka shade chunein, uska official Asian Paints
+            shade code dekhein aur Daksha House Paint Service se
+            painting quotation ke liye WhatsApp karein.
+        </p>
+
+        <div class="catalogue-filters">
+            <input
+                type="search"
+                id="colourSearch"
+                placeholder="Shade name ya official code search karein..."
+                aria-label="Search shade name or official code">
+
+            <select id="colourCategory" aria-label="Filter shade category">
+                <option value="all">Sabhi categories</option>
+                <option value="Whites & Off Whites">Whites &amp; Off Whites</option>
+                <option value="Purples & Pinks">Purples &amp; Pinks</option>
+                <option value="Blues">Blues</option>
+                <option value="Browns">Browns</option>
+                <option value="Yellows & Greens">Yellows &amp; Greens</option>
+                <option value="Greys">Greys</option>
+                <option value="Reds & Oranges">Reds &amp; Oranges</option>
+            </select>
+        </div>
+
+        <p id="colourCount" class="catalogue-count" aria-live="polite">
+            Loading shades...
+        </p>
+
+        <div id="colourGrid" class="catalogue-grid"></div>
+
+        <div id="colourEmpty" class="catalogue-empty">
+            Koi shade nahi mila. Naam ya code dobara check karein.
+        </div>
+
+        <div class="catalogue-selection">
+            <div id="selectedColourPreview" class="catalogue-preview"></div>
+
+            <div>
+                <h3 id="selectedColourName" class="catalogue-selected-name">
+                    Apna favourite shade select karein
+                </h3>
+
+                <p id="selectedColourCode" class="catalogue-selected-code">
+                    Shade select karne par official code yahan dikhega.
+                </p>
+
+                <div class="catalogue-actions">
+                    <button type="button"
+                            id="copyColourCode"
+                            class="catalogue-action copy">
+                        Copy Official Code
+                    </button>
+
+                    <a href="https://wa.me/919560165748"
+                       id="colourWhatsApp"
+                       class="catalogue-action whatsapp"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        WhatsApp Enquiry
+                    </a>
+                </div>
+
+                <p id="colourStatus"
+                   class="catalogue-status"
+                   aria-live="polite"></p>
+            </div>
+        </div>
+
+        <p class="catalogue-note">
+            Shade names aur codes Asian Paints ke published catalogue
+            se liye gaye hain. Screen par dikhne wale swatches sirf
+            approximate digital previews hain; ye manufacturer ke
+            exact colour samples nahi hain. Paint kharidne ya lagwane
+            se pehle official physical shade card se code aur colour
+            confirm karein.
+            <br><br>
+            Official catalogue:
+            <a href="https://www.asianpaints.com/colour-catalogue.html"
+               target="_blank"
+               rel="noopener noreferrer">
+                Asian Paints Colour Catalogue
+            </a>
+        </p>
     </section>
 
     <!-- WHY CHOOSE US -->
     <section class="why-us" id="about">
-
         <div class="why-image">
             <div class="big-paint">🎨</div>
         </div>
@@ -193,33 +506,16 @@
             </p>
 
             <div class="features">
-                <div>
-                    <strong>✓</strong>
-                    <span>Experienced Painters</span>
-                </div>
-
-                <div>
-                    <strong>✓</strong>
-                    <span>Premium Quality Finish</span>
-                </div>
-
-                <div>
-                    <strong>✓</strong>
-                    <span>Affordable Pricing</span>
-                </div>
-
-                <div>
-                    <strong>✓</strong>
-                    <span>On-Time Completion</span>
-                </div>
+                <div><strong>✓</strong><span>Experienced Painters</span></div>
+                <div><strong>✓</strong><span>Premium Quality Finish</span></div>
+                <div><strong>✓</strong><span>Affordable Pricing</span></div>
+                <div><strong>✓</strong><span>On-Time Completion</span></div>
             </div>
         </div>
-
     </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-
         <div class="section-heading">
             <p>OUR WORK</p>
             <h2>Our Recent Projects</h2>
@@ -229,41 +525,28 @@
         </div>
 
         <div class="services-grid">
-
             <div class="service-card">
                 <div class="service-icon">🏠</div>
                 <h3>Home Interior</h3>
-                <p>
-                    Complete interior painting with smooth
-                    and premium finishing.
-                </p>
+                <p>Complete interior painting with smooth and premium finishing.</p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">🏢</div>
                 <h3>House Exterior</h3>
-                <p>
-                    Professional exterior painting for
-                    long-lasting protection.
-                </p>
+                <p>Professional exterior painting for long-lasting protection.</p>
             </div>
 
             <div class="service-card">
                 <div class="service-icon">✨</div>
                 <h3>Designer Texture</h3>
-                <p>
-                    Modern wall texture designs for
-                    beautiful interiors.
-                </p>
+                <p>Modern wall texture designs for beautiful interiors.</p>
             </div>
-
         </div>
-
     </section>
 
     <!-- CONTACT FORM -->
     <section id="contact" class="section contact-section">
-
         <div class="section-heading">
             <p>GET IN TOUCH</p>
             <h2>Get Your Free Painting Quote</h2>
@@ -277,7 +560,6 @@
             <h3>Get Your Free Quote</h3>
 
             <form id="quoteForm">
-
                 <input type="text"
                        id="name"
                        placeholder="Your Name"
@@ -312,9 +594,7 @@
                        placeholder="Your Location"
                        required>
 
-                <input type="date"
-                       id="date"
-                       required>
+                <input type="date" id="date" required>
 
                 <select id="time" required>
                     <option value="">Select Preferred Time</option>
@@ -328,66 +608,218 @@
                           rows="4"
                           placeholder="Tell us about your painting requirement"></textarea>
 
-                <button type="submit">
-                    Get Free Quote on WhatsApp
-                </button>
-
+                <button type="submit">Get Free Quote on WhatsApp</button>
             </form>
         </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
         <h3>DAKSHA HOUSE PAINT SERVICE</h3>
-
-        <p>
-            Professional Painting Services in Gurugram
-        </p>
-
-        <p>
-            © 2026 Daksha House Paint Service. All Rights Reserved.
-        </p>
+        <p>Professional Painting Services in Gurugram</p>
+        <p>© 2026 Daksha House Paint Service. All Rights Reserved.</p>
     </footer>
 
-    <!-- WHATSAPP FORM SCRIPT -->
+    <!-- QUOTE FORM WHATSAPP -->
     <script>
-        document.getElementById("quoteForm").addEventListener(
-            "submit",
-            function (event) {
-                event.preventDefault();
+        document.getElementById("quoteForm").addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                const name = document.getElementById("name").value.trim();
-                const phone = document.getElementById("phone").value.trim();
-                const property = document.getElementById("property").value;
-                const service = document.getElementById("service").value;
-                const location = document.getElementById("location").value.trim();
-                const date = document.getElementById("date").value;
-                const time = document.getElementById("time").value;
-                const message = document.getElementById("message").value.trim();
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const property = document.getElementById("property").value;
+            const service = document.getElementById("service").value;
+            const location = document.getElementById("location").value.trim();
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            const message = document.getElementById("message").value.trim();
 
-                const whatsappMessage =
-                    "Hello Daksha House Paint Service,\n\n" +
-                    "New Free Quote Request\n\n" +
-                    "Name: " + name + "\n" +
-                    "Mobile: " + phone + "\n" +
-                    "Property: " + property + "\n" +
-                    "Service: " + service + "\n" +
-                    "Location: " + location + "\n" +
-                    "Preferred Date: " + date + "\n" +
-                    "Preferred Time: " + time + "\n" +
-                    "Requirement: " + message;
+            const whatsappMessage =
+                "Hello Daksha House Paint Service,\n\n" +
+                "New Free Quote Request\n\n" +
+                "Name: " + name + "\n" +
+                "Mobile: " + phone + "\n" +
+                "Property: " + property + "\n" +
+                "Service: " + service + "\n" +
+                "Location: " + location + "\n" +
+                "Preferred Date: " + date + "\n" +
+                "Preferred Time: " + time + "\n" +
+                "Requirement: " + message;
 
-                const whatsappURL =
-                    "https://wa.me/919560165748?text=" +
-                    encodeURIComponent(whatsappMessage);
-
-                window.location.href = whatsappURL;
-            }
-        );
+            window.location.href =
+                "https://wa.me/919560165748?text=" +
+                encodeURIComponent(whatsappMessage);
+        });
     </script>
 
-    <!-- FIREBASE CONNECTION -->
+    <!-- ASIAN PAINTS SHADE CATALOGUE -->
+    <script>
+        (() => {
+            /*
+              Official shade names and codes are listed separately
+              from the approximate digital preview colours.
+            */
+            const shades = [
+                { name: "Air Breeze", code: "9436", hex: "#E8E9E5", category: "Whites & Off Whites" },
+                { name: "Button Rose", code: "8108", hex: "#D8A5AC", category: "Purples & Pinks" },
+                { name: "Soft Breeze", code: "8116", hex: "#C9DCD7", category: "Blues" },
+                { name: "Zinnia Bloom", code: "8716", hex: "#D8A8B7", category: "Purples & Pinks" },
+                { name: "Essence", code: "8099", hex: "#D9D2C7", category: "Whites & Off Whites" },
+                { name: "Pink Mist", code: "8092", hex: "#E7C9CF", category: "Purples & Pinks" },
+                { name: "Angel Harp", code: "8124", hex: "#E8DBD4", category: "Whites & Off Whites" },
+                { name: "Lucid Dream", code: "5182", hex: "#B8C8D8", category: "Blues" },
+                { name: "Winged Angel", code: "8100", hex: "#E7DED6", category: "Whites & Off Whites" },
+                { name: "Touch of Fuschia", code: "8140", hex: "#B85D83", category: "Purples & Pinks" },
+                { name: "Day Lily", code: "8060", hex: "#E8D9A7", category: "Yellows & Greens" },
+                { name: "Tinge of Rose", code: "8084", hex: "#D8B6B6", category: "Purples & Pinks" },
+                { name: "Soft Chenille", code: "8036", hex: "#D8C9BA", category: "Browns" },
+                { name: "Zen", code: "8676", hex: "#C7D0B9", category: "Yellows & Greens" },
+                { name: "White Clay", code: "8620", hex: "#E7E0D5", category: "Whites & Off Whites" },
+                { name: "Milkshake", code: "8012", hex: "#E6D5C4", category: "Browns" },
+                { name: "Lilac Frost", code: "7148", hex: "#D5CDE1", category: "Purples & Pinks" },
+                { name: "Twilight Sky", code: "8204", hex: "#8998B5", category: "Blues" },
+                { name: "Willow Creek", code: "8068", hex: "#B6C3A8", category: "Yellows & Greens" },
+                { name: "Gossamer", code: "8052", hex: "#D7DDD1", category: "Yellows & Greens" },
+                { name: "Blush", code: "L139", hex: "#E7C9CA", category: "Purples & Pinks" },
+                { name: "Summer Blush-N", code: "0945", hex: "#E7B9B3", category: "Purples & Pinks" },
+                { name: "Daisy Bloom", code: "L178", hex: "#E8E0BD", category: "Yellows & Greens" }
+            ];
+
+            const grid = document.getElementById("colourGrid");
+            const search = document.getElementById("colourSearch");
+            const category = document.getElementById("colourCategory");
+            const count = document.getElementById("colourCount");
+            const empty = document.getElementById("colourEmpty");
+            const preview = document.getElementById("selectedColourPreview");
+            const selectedName = document.getElementById("selectedColourName");
+            const selectedCode = document.getElementById("selectedColourCode");
+            const copyButton = document.getElementById("copyColourCode");
+            const whatsappButton = document.getElementById("colourWhatsApp");
+            const status = document.getElementById("colourStatus");
+
+            let selectedColour = null;
+
+            function renderColours() {
+                const query = search.value.trim().toLowerCase();
+
+                const filtered = shades.filter(shade => {
+                    const matchesSearch =
+                        shade.name.toLowerCase().includes(query) ||
+                        shade.code.toLowerCase().includes(query);
+
+                    const matchesCategory =
+                        category.value === "all" ||
+                        shade.category === category.value;
+
+                    return matchesSearch && matchesCategory;
+                });
+
+                grid.replaceChildren();
+
+                filtered.forEach(shade => {
+                    const button = document.createElement("button");
+                    button.type = "button";
+                    button.className = "catalogue-shade";
+
+                    if (selectedColour && selectedColour.code === shade.code) {
+                        button.classList.add("is-selected");
+                    }
+
+                    button.setAttribute(
+                        "aria-label",
+                        "Select " + shade.name + ", official shade code " + shade.code
+                    );
+
+                    const swatch = document.createElement("span");
+                    swatch.className = "catalogue-swatch";
+                    swatch.style.backgroundColor = shade.hex;
+                    swatch.title = "Approximate digital preview";
+
+                    const info = document.createElement("span");
+                    info.className = "catalogue-shade-info";
+
+                    const name = document.createElement("strong");
+                    name.textContent = shade.name;
+
+                    const brand = document.createElement("small");
+                    brand.textContent = "Asian Paints";
+
+                    const code = document.createElement("span");
+                    code.className = "official-code";
+                    code.textContent = "Code: " + shade.code;
+
+                    const type = document.createElement("small");
+                    type.textContent = shade.category;
+
+                    info.append(name, brand, code, type);
+                    button.append(swatch, info);
+
+                    button.addEventListener("click", () => {
+                        selectColour(shade);
+                    });
+
+                    grid.appendChild(button);
+                });
+
+                count.textContent =
+                    filtered.length + " official shade listings";
+
+                empty.style.display = filtered.length ? "none" : "block";
+            }
+
+            function selectColour(shade) {
+                selectedColour = shade;
+
+                preview.style.backgroundColor = shade.hex;
+                selectedName.textContent = shade.name;
+
+                selectedCode.textContent =
+                    "Official Asian Paints shade code: " + shade.code;
+
+                status.textContent =
+                    "Selected: " + shade.name + " (" + shade.code + ")";
+
+                const message = [
+                    "Namaste Daksha House Paint Service!",
+                    "Mujhe Asian Paints ka yeh shade chahiye:",
+                    "Shade name: " + shade.name,
+                    "Official shade code: " + shade.code,
+                    "Please confirm the physical shade and painting quotation."
+                ].join("\n");
+
+                whatsappButton.href =
+                    "https://wa.me/919560165748?text=" +
+                    encodeURIComponent(message);
+
+                renderColours();
+            }
+
+            copyButton.addEventListener("click", async () => {
+                if (!selectedColour) {
+                    status.textContent = "Pehle koi shade select karein.";
+                    return;
+                }
+
+                try {
+                    await navigator.clipboard.writeText(selectedColour.code);
+                    status.textContent =
+                        "Official code " + selectedColour.code + " copied!";
+                } catch (error) {
+                    window.prompt(
+                        "Official shade code copy karein:",
+                        selectedColour.code
+                    );
+                }
+            });
+
+            search.addEventListener("input", renderColours);
+            category.addEventListener("change", renderColours);
+
+            renderColours();
+        })();
+    </script>
+
+    <!-- FIREBASE CONFIGURATION PRESERVED -->
     <script type="module">
         import { initializeApp }
             from "https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js";
