@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172033">
+
+    <title>Colour Studio | Daksha House Paint Service</title>
+
+    <meta name="description" content="Daksha House Paint Service Gurugram Colour Studio. Explore wall paint colours, shades and colour combinations.">
+
+    <link rel="stylesheet" href="colourstudio.css">
+</head>
+
+<body>
+
+    <header class="studio-header">
+        <a href="index.html" class="brand">
+            <span class="brand-icon">🎨</span>
+            <span>
+                <strong>DAKSHA PAINTS</strong>
+                <small>COLOUR STUDIO</small>
+            </span>
+        </a>
+
+        <a href="index.html" class="back-button">
+            ← Main Website
+        </a>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <span class="eyebrow">YOUR HOME, YOUR COLOURS</span>
+
+            <h1>Discover Your Perfect <span>Colour</span></h1>
+
+            <p>
+                Apne ghar ke liye khoobsurat colours chuno.
+                Naye shades dekho, colour codes copy karo
+                aur apne dream home ka colour plan banao.
+            </p>
+
+            <a href="#colour-catalogue" class="primary-button">
+                Explore Colours ↓
+            </a>
+        </section>
+
+        <section class="tools-section" id="colour-catalogue">
+
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">COLOUR COLLECTION</span>
+                    <h2>Apna Favourite Colour Chuno</h2>
+                    <p>Colour par click karke uska code dekho.</p>
+                </div>
+
+                <span class="colour-count" id="colour-count">
+                    Shades loading...
+                </span>
+            </div>
+
+            <div class="search-box">
+                <span>🔍</span>
+                <input
+                    type="search"
+                    id="colour-search"
+                    placeholder="Colour ka naam ya HEX code search karo..."
+                    aria-label="Search colours"
+                >
+            </div>
+
+            <div class="filters" id="colour-filters">
+                <button class="filter-btn active" data-filter="All">
+                    All Colours
+                </button>
+                <button class="filter-btn" data-filter="White">
+                    White
+                </button>
+                <button class="filter-btn" data-filter="Cream">
+                    Cream
+                </button>
+                <button class="filter-btn" data-filter="Pink">
+                    Pink
+                </button>
+                <button class="filter-btn" data-filter="Red">
+                    Red
+                </button>
+                <button class="filter-btn" data-filter="Orange">
+                    Orange
+                </button>
+                <button class="filter-btn" data-filter="Yellow">
+                    Yellow
+                </button>
+                <button class="filter-btn" data-filter="Green">
+                    Green
+                </button>
+                <button class="filter-btn" data-filter="Blue">
+                    Blue
+                </button>
+                <button class="filter-btn" data-filter="Purple">
+                    Purple
+                </button>
+                <button class="filter-btn" data-filter="Brown">
+                    Brown
+                </button>
+                <button class="filter-btn" data-filter="Grey">
+                    Grey
+                </button>
+                <button class="filter-btn" data-filter="Black">
+                    Black
+                </button>
+            </div>
+
+            <div class="catalogue-layout">
+
+                <div class="colour-grid" id="colour-grid">
+                    <!-- JavaScript yahan colour shades dikhayega -->
+                </div>
+
+                <aside class="colour-details" id="colour-details">
+                    <div
+                        class="selected-preview"
+                        id="selected-preview"
+                        style="background-color: #E87524"
+                    ></div>
+
+                    <span class="eyebrow">SELECTED COLOUR</span>
+
+                    <h3 id="selected-name">Warm Orange</h3>
+
+                    <p class="hex-code" id="selected-hex">#E87524</p>
+
+                    <button class="primary-button copy-button" id="copy-code">
+                        Copy Colour Code
+                    </button>
+
+                    <p class="details-note" id="copy-message">
+                        Kisi bhi shade par click karke details dekho.
+                    </p>
+
+                    <label for="custom-colour">Apna colour code bhi try karo</label>
+
+                    <input
+                        type="color"
+                        id="custom-colour"
+                        value="#E87524"
+                    >
+                </aside>
+
+            </div>
+
+            <div class="empty-state" id="empty-state" hidden>
+                <h3>Koi colour nahi mila!</h3>
+                <p>Dusra colour name ya HEX code search karo.</p>
+            </div>
+
+        </section>
+
+        <section class="info-section">
+            <h2>Ghar ko do naya look</h2>
+            <p>
+                Interior painting, exterior painting, texture design
+                aur waterproofing ke liye Daksha House Paint Service,
+                Gurugram se sampark karein.
+            </p>
+
+            <a
+                class="primary-button"
+                href="https://wa.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp par Contact Karein
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Daksha House Paint Service | Gurugram</p>
+        <a href="index.html">Main Website par Wapas Jayein</a>
+    </footer>
+
+    <script src="colourstudio.js"></script>
+
+</body>
+</html>

@@ -425,7 +425,8 @@ button {
     line-height: 1.85;
 }
 
-/* 6. ABOUT / WHY CHOOSE US */
+/* 6. ABOUT / WHY CHOOSE US
+   Ye classes about.html mein bhi use ho sakti hain. */
 
 .why-us {
     padding: 82px 8%;
@@ -637,7 +638,7 @@ footer p:last-child {
 
 /* ==========================================
    10. COLOUR CATALOGUE
-   Matches the exact classes in index.html
+   Matches the classes used in index.html
 ========================================== */
 
 body #colour-catalogue {
@@ -710,8 +711,10 @@ body #colour-catalogue .catalogue-shade {
     text-align: left;
     cursor: pointer;
     box-shadow: 0 5px 18px rgba(0, 0, 0, .07);
-    transition: transform .25s ease, box-shadow .25s ease,
-                border-color .25s ease;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
 }
 
 body #colour-catalogue .catalogue-shade:hover {

@@ -1,0 +1,1221 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#172033">
+
+    <title>About Us | Daksha House Paint Service</title>
+
+    <meta name="description" content="Daksha House Paint Service Gurugram. Interior painting, exterior painting, wall texture, waterproofing aur colour consultation services.">
+
+    <style>
+        :root {
+            --navy: #172033;
+            --orange: #e87524;
+            --cream: #fff8f0;
+            --text: #293347;
+            --muted: #697386;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            background: var(--navy);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 5px 20px #10182725;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: var(--orange);
+            border-radius: 13px;
+            font-size: 25px;
+        }
+
+        .logo strong,
+        .logo small {
+            display: block;
+        }
+
+        .logo strong {
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        .logo small {
+            color: #ffbd8a;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #f0f3fa;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.current {
+            color: #ffad70;
+        }
+
+        /* HERO */
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+            color: white;
+            background:
+                radial-gradient(circle at 90% 20%, #e8752440, transparent 30%),
+                linear-gradient(125deg, #172033, #2b3c58);
+            padding: 100px 0 95px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            color: var(--orange);
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero .eyebrow {
+            color: #ffbd8a;
+        }
+
+        .hero h1 {
+            font-size: clamp(37px, 5vw, 62px);
+            line-height: 1.13;
+            margin: 18px 0 23px;
+        }
+
+        .hero h1 span {
+            color: #ffad70;
+        }
+
+        .hero p {
+            color: #dce4f0;
+            max-width: 570px;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+
+        .button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 22px;
+            border-radius: 9px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.25s;
+        }
+
+        .button-orange {
+            color: white;
+            background: var(--orange);
+        }
+
+        .button-orange:hover {
+            background: #cb5b10;
+            transform: translateY(-2px);
+        }
+
+        .button-outline {
+            border: 1px solid #ffffff70;
+            color: white;
+        }
+
+        .button-outline:hover {
+            background: #ffffff15;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .paint-art {
+            min-height: 350px;
+            position: relative;
+            border: 1px solid #ffffff35;
+            border-radius: 25px;
+            padding: 22px;
+            background: #ffffff0c;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .paint-art-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .paint-art-label {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #e5eaf3;
+        }
+
+        .paint-art-badge {
+            background: #ffffff18;
+            padding: 6px 11px;
+            border-radius: 30px;
+            font-size: 11px;
+        }
+
+        .paint-cans {
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap: 12px;
+            padding: 25px 0;
+        }
+
+        .paint-can {
+            width: 27%;
+            max-width: 110px;
+            height: 165px;
+            border-radius: 10px 10px 17px 17px;
+            box-shadow: inset -10px 0 15px #00000017,
+                        0 15px 25px #00000030;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .paint-can:nth-child(2) {
+            height: 210px;
+        }
+
+        .paint-can:nth-child(3) {
+            height: 185px;
+        }
+
+        .paint-can::before {
+            content: "";
+            display: block;
+            height: 13px;
+            background: #ffffff95;
+            border-bottom: 3px solid #00000013;
+        }
+
+        .paint-can span {
+            position: absolute;
+            top: 43%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 1px 5px #00000050;
+        }
+
+        .paint-art-bottom {
+            border-top: 1px solid #ffffff30;
+            padding-top: 15px;
+            color: #e0e7f2;
+            font-size: 13px;
+        }
+
+        /* INTRO */
+
+        .intro {
+            padding: 90px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 65px;
+            align-items: center;
+        }
+
+        .intro-art {
+            min-height: 390px;
+            border-radius: 22px;
+            overflow: hidden;
+            padding: 28px;
+            background:
+                linear-gradient(135deg, #f7d5b8, #f4bda1 45%, #e87524);
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            position: relative;
+        }
+
+        .wall-art {
+            position: absolute;
+            inset: 25px 25px 95px;
+            border: 10px solid #ffffffb0;
+            border-radius: 8px;
+            background:
+                linear-gradient(90deg,
+                    #e9d6b9 0 33%,
+                    #c4a78d 33% 66%,
+                    #e8b8a1 66% 100%);
+            box-shadow: 0 12px 25px #61391d25;
+        }
+
+        .wall-art::before {
+            content: "";
+            position: absolute;
+            left: 15%;
+            right: 15%;
+            top: 20%;
+            bottom: 0;
+            background: linear-gradient(90deg, #ffffffaa, #ffffff30);
+            border: 8px solid #fff9;
+            border-bottom: 0;
+        }
+
+        .intro-art-caption {
+            position: relative;
+            z-index: 1;
+            color: white;
+            background: #172033e8;
+            padding: 18px;
+            border-radius: 12px;
+        }
+
+        .intro-art-caption strong {
+            display: block;
+            font-size: 20px;
+        }
+
+        .intro-art-caption span {
+            font-size: 12px;
+            color: #e4eaf4;
+        }
+
+        .intro h2,
+        .section-title {
+            font-size: clamp(29px, 4vw, 43px);
+            line-height: 1.2;
+            margin: 13px 0 20px;
+            color: var(--navy);
+        }
+
+        .intro p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .highlight {
+            color: var(--orange);
+            font-weight: bold;
+        }
+
+        .promise {
+            margin-top: 25px;
+            padding: 17px 20px;
+            border-left: 4px solid var(--orange);
+            background: var(--cream);
+            border-radius: 0 10px 10px 0;
+            color: var(--navy);
+            font-weight: bold;
+        }
+
+        /* STATS */
+
+        .stats {
+            background: var(--cream);
+            padding: 38px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat {
+            padding: 12px;
+        }
+
+        .stat-icon {
+            font-size: 27px;
+        }
+
+        .stat h3 {
+            font-size: 19px;
+            color: var(--navy);
+            margin: 7px 0 3px;
+        }
+
+        .stat p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 90px 0;
+            background: #f7f8fb;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 730px;
+            margin: 0 auto 42px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin-top: 12px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e8ebf1;
+            padding: 28px 24px;
+            border-radius: 17px;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px #17203312;
+        }
+
+        .service-icon {
+            width: 57px;
+            height: 57px;
+            display: grid;
+            place-items: center;
+            border-radius: 15px;
+            background: var(--cream);
+            font-size: 28px;
+            margin-bottom: 19px;
+        }
+
+        .service-card h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* WORK PROCESS */
+
+        .process {
+            padding: 90px 0;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .process-step {
+            padding: 24px 18px;
+            border-top: 3px solid var(--orange);
+            background: white;
+            box-shadow: 0 8px 30px #17203309;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .step-number {
+            color: var(--orange);
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .process-step h3 {
+            color: var(--navy);
+            font-size: 17px;
+            margin: 12px 0 8px;
+        }
+
+        .process-step p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* WHY US */
+
+        .why-us {
+            padding: 80px 0;
+            color: white;
+            background: var(--navy);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .why-us h2 {
+            font-size: clamp(29px, 4vw, 40px);
+            line-height: 1.2;
+            margin: 13px 0 17px;
+        }
+
+        .why-us .description {
+            color: #d3dbe8;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .benefit {
+            padding: 17px;
+            border: 1px solid #ffffff25;
+            border-radius: 12px;
+            background: #ffffff09;
+        }
+
+        .benefit strong {
+            display: block;
+            color: #ffbd8a;
+            margin-bottom: 5px;
+        }
+
+        .benefit span {
+            font-size: 12px;
+            color: #d3dbe8;
+        }
+
+        /* CTA */
+
+        .cta {
+            padding: 85px 0;
+            background:
+                radial-gradient(circle at 90% 20%, #e8752420, transparent 28%),
+                #fff8f0;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: clamp(30px, 4vw, 43px);
+            color: var(--navy);
+            line-height: 1.2;
+            margin: 13px 0;
+        }
+
+        .cta p {
+            max-width: 670px;
+            margin: 0 auto 25px;
+            color: var(--muted);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: #101827;
+            color: #dce3ed;
+            padding: 45px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr 1fr;
+            gap: 35px;
+            padding-bottom: 30px;
+        }
+
+        .footer h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .footer p,
+        .footer a {
+            color: #bdc7d6;
+            font-size: 13px;
+        }
+
+        .footer a {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .footer a:hover {
+            color: #ffbd8a;
+        }
+
+        .footer-bottom {
+            padding-top: 18px;
+            border-top: 1px solid #ffffff20;
+            text-align: center;
+            font-size: 12px;
+            color: #aab5c5;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .hero-grid,
+            .intro-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .paint-art {
+                min-height: 300px;
+            }
+
+            .intro-art {
+                min-height: 320px;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 17px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                width: 91%;
+            }
+
+            .logo strong {
+                font-size: 13px;
+            }
+
+            .logo-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 58px 0;
+            }
+
+            .hero h1 {
+                font-size: 39px;
+            }
+
+            .paint-art {
+                min-height: 280px;
+                padding: 15px;
+            }
+
+            .paint-can {
+                height: 130px;
+            }
+
+            .paint-can:nth-child(2) {
+                height: 175px;
+            }
+
+            .paint-can:nth-child(3) {
+                height: 150px;
+            }
+
+            .intro,
+            .services,
+            .process {
+                padding: 60px 0;
+            }
+
+            .services-grid,
+            .process-grid,
+            .stats-grid,
+            .benefits,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                gap: 5px;
+            }
+
+            .stat {
+                padding: 15px 5px;
+            }
+
+            .intro-art {
+                min-height: 300px;
+            }
+
+            .footer-grid {
+                gap: 24px;
+            }
+
+            .cta {
+                padding: 60px 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <div class="container nav-inner">
+
+            <a class="logo" href="index.html">
+                <span class="logo-icon">🎨</span>
+                <span>
+                    <strong>DAKSHA PAINTS</strong>
+                    <small>HOUSE PAINT SERVICE</small>
+                </span>
+            </a>
+
+            <nav class="nav-links" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="#our-story" class="current">About</a>
+                <a href="#our-services">Services</a>
+                <a href="colourstudio.html">Colour Studio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div>
+                    <span class="eyebrow">WELCOME TO DAKSHA PAINTS</span>
+
+                    <h1>
+                        Har Deewar Ki
+                        <span>Apni Kahani.</span>
+                    </h1>
+
+                    <p>
+                        Aapka ghar sirf eenton aur deewaron se nahi banta.
+                        Yeh aapke sapno, yaadon aur apno ki jagah hai.
+                        Daksha House Paint Service ka maksad hai aapki
+                        jagah ko naye rangon aur khoobsurat finishes ke
+                        saath ek naya look dene mein madad karna.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#our-story" class="button button-orange">
+                            Hamare Baare Mein
+                        </a>
+
+                        <a href="colourstudio.html" class="button button-outline">
+                            🎨 Explore Colours
+                        </a>
+                    </div>
+                </div>
+
+                <div class="paint-art" aria-label="Decorative paint colour display">
+
+                    <div class="paint-art-top">
+                        <span class="paint-art-label">COLOURS THAT INSPIRE</span>
+                        <span class="paint-art-badge">Daksha Paints</span>
+                    </div>
+
+                    <div class="paint-cans">
+                        <div class="paint-can" style="background:#E87524">
+                            <span>ENERGY</span>
+                        </div>
+
+                        <div class="paint-can" style="background:#E6C7A7">
+                            <span>COMFORT</span>
+                        </div>
+
+                        <div class="paint-can" style="background:#426B73">
+                            <span>CALM</span>
+                        </div>
+                    </div>
+
+                    <div class="paint-art-bottom">
+                        Har rang mein ek ehsaas, har finish mein ek naya andaaz.
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OUR STORY -->
+        <section class="intro" id="our-story">
+            <div class="container intro-grid">
+
+                <div class="intro-art">
+                    <div class="wall-art"></div>
+
+                    <div class="intro-art-caption">
+                        <strong>Aapka Ghar, Aapki Pehchaan</strong>
+                        <span>Beautiful spaces begin with thoughtful choices.</span>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="eyebrow">OUR STORY</span>
+
+                    <h2>Hum Sirf Rang Nahi, Ghar Ka Naya Andaaz Chunte Hain.</h2>
+
+                    <p>
+                        <span class="highlight">Daksha House Paint Service</span>
+                        Gurugram mein painting aur home colour selection
+                        se judi services ke liye aapka local service partner
+                        banne ka lakshya rakhti hai.
+                    </p>
+
+                    <p>
+                        Hum samajhte hain ki har ghar aur har customer ki
+                        zaroorat alag hoti hai. Kisi ko simple aur elegant
+                        deewarein pasand hain, toh kisi ko modern textures
+                        aur bold colour combinations.
+                    </p>
+
+                    <p>
+                        Isi liye hum colour selection se lekar painting
+                        requirements samajhne tak, aapko soch-samajhkar
+                        sahi options chunne mein madad dena chahte hain.
+                    </p>
+
+                    <p>
+                        Hamara focus hai clear communication, kaam ki
+                        planning, suitable materials aur painting ke dauraan
+                        jagah ko jitna mumkin ho saaf aur व्यवस्थित rakhna.
+                    </p>
+
+                    <div class="promise">
+                        "Aapki Pasand, Aapke Ghar Ka Look — Har Faisle Mein
+                        Aapki Zaroorat Sabse Pehle."
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICE APPROACH -->
+        <section class="stats">
+            <div class="container stats-grid">
+
+                <div class="stat">
+                    <div class="stat-icon">🏡</div>
+                    <h3>Har Tarah Ki Spaces</h3>
+                    <p>Ghar, flat aur office ki painting requirements.</p>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">🎨</div>
+                    <h3>Colour Selection</h3>
+                    <p>Apni pasand ke shades aur combinations explore karein.</p>
+                </div>
+
+                <div class="stat">
+                    <div class="stat-icon">🤝</div>
+                    <h3>Customer First</h3>
+                    <p>Clear baat-cheet aur zaroorat ke hisaab se planning.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section class="services" id="our-services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">WHAT WE DO</span>
+
+                    <h2 class="section-title">
+                        Aapke Ghar Ke Liye Painting Solutions
+                    </h2>
+
+                    <p>
+                        Apni property aur requirement ke hisaab se service
+                        chunein. Kaam shuru karne se pehle scope, finish
+                        aur estimate par baat kar sakte hain.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <div class="service-icon">🛋️</div>
+                        <h3>Interior Painting</h3>
+                        <p>
+                            Bedroom, living room, kitchen aur doosre indoor
+                            spaces ke liye suitable colours aur finishes
+                            chunne mein madad.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Exterior Painting</h3>
+                        <p>
+                            Ghar ke outer walls ke liye weather conditions
+                            aur surface requirements ke hisaab se suitable
+                            painting options.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🖌️</div>
+                        <h3>Wall Texture Design</h3>
+                        <p>
+                            Feature walls aur decorative finishes ke liye
+                            modern texture ideas aur design options.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">💧</div>
+                        <h3>Waterproofing</h3>
+                        <p>
+                            Seepage aur dampness ki problem ke liye surface
+                            inspection aur suitable waterproofing solutions
+                            par guidance.
+                        </p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🌈</div>
+                        <h3>Colour Consultation</h3>
+                        <p>
+                            Furniture, lighting aur personal preference ko
+                            dhyan mein rakhkar colour combinations explore
+                            karein.
+                        </p>
+                        <a class="highlight" href="colourstudio.html">
+                            Open Colour Studio →
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🧱</div>
+                        <h3>Surface Preparation</h3>
+                        <p>
+                            Painting se pehle wall ki condition ke hisaab se
+                            cleaning, filling aur primer jaise kaamon ki
+                            requirements samjhein.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK PROCESS -->
+        <section class="process">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">OUR WORKING PROCESS</span>
+
+                    <h2 class="section-title">
+                        Kaam Kaise Aage Badhega?
+                    </h2>
+
+                    <p>
+                        Har project ki zaroorat alag hoti hai. Ek clear
+                        process se planning aur communication aasan hoti hai.
+                    </p>
+                </div>
+
+                <div class="process-grid">
+
+                    <article class="process-step">
+                        <span class="step-number">STEP 01</span>
+                        <h3>Aapki Requirement</h3>
+                        <p>
+                            Aap humein property, location aur painting
+                            requirement ke baare mein batayein.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="step-number">STEP 02</span>
+                        <h3>Discussion & Estimate</h3>
+                        <p>
+                            Scope, surface condition, material aur budget
+                            par discussion karke estimate taiyar karein.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="step-number">STEP 03</span>
+                        <h3>Colour & Planning</h3>
+                        <p>
+                            Pasand ke shades, finishes aur work schedule
+                            ko finalise karein.
+                        </p>
+                    </article>
+
+                    <article class="process-step">
+                        <span class="step-number">STEP 04</span>
+                        <h3>Painting Work</h3>
+                        <p>
+                            Agreed scope aur schedule ke hisaab se kaam
+                            aage badhayein aur progress par baat karein.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY DAKSHA -->
+        <section class="why-us">
+            <div class="container why-grid">
+
+                <div>
+                    <span class="eyebrow">WHY CHOOSE US</span>
+
+                    <h2>Aapki Pasand Aur Aapki Property Ki Zaroorat.</h2>
+
+                    <p class="description">
+                        Painting select karte waqt sirf colour hi nahi,
+                        surface condition, lighting, material aur expected
+                        finish bhi matter karte hain. Humara approach hai
+                        ki in points par aapse pehle hi discussion ho,
+                        taaki aap informed decision le sakein.
+                    </p>
+                </div>
+
+                <div class="benefits">
+
+                    <div class="benefit">
+                        <strong>🎯 Requirement-Based</strong>
+                        <span>Aapke space aur needs ke hisaab se options.</span>
+                    </div>
+
+                    <div class="benefit">
+                        <strong>🎨 Colour Ideas</strong>
+                        <span>Alag shades aur combinations explore karein.</span>
+                    </div>
+
+                    <div class="benefit">
+                        <strong>📋 Clear Planning</strong>
+                        <span>Scope, estimate aur schedule par discussion.</span>
+                    </div>
+
+                    <div class="benefit">
+                        <strong>🤝 Direct Communication</strong>
+                        <span>Project ke baare mein seedhi baat-cheet.</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="cta" id="contact">
+            <div class="container">
+
+                <span class="eyebrow">LET'S PLAN YOUR NEXT PROJECT</span>
+
+                <h2>Apne Ghar Ko Naye Rang Dene Ke Liye Ready Hain?</h2>
+
+                <p>
+                    Apni painting requirement, property location aur
+                    pasand ke colours ke baare mein humse baat karein.
+                    Hum aapki requirement samajhne aur agle steps discuss
+                    karne mein madad karenge.
+                </p>
+
+                <div class="cta-buttons">
+                    <a
+                        class="button button-orange"
+                        href="https://wa.me/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp Par Baat Karein
+                    </a>
+
+                    <a class="button" style="border:1px solid #d7dce5"
+                       href="colourstudio.html">
+                        🎨 Colour Studio Kholein
+                    </a>
+                </div>
+
+                <p style="font-size:12px; margin-top:16px">
+                    Gurugram, Haryana
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div>
+                    <h3>🎨 Daksha House Paint Service</h3>
+                    <p>
+                        Painting services aur colour selection ke liye
+                        aapki property aur personal preference ke hisaab
+                        se options explore karein.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="#our-story">About Us</a>
+                    <a href="#our-services">Our Services</a>
+                    <a href="colourstudio.html">Colour Studio</a>
+                </div>
+
+                <div>
+                    <h3>Our Services</h3>
+                    <a href="#our-services">Interior Painting</a>
+                    <a href="#our-services">Exterior Painting</a>
+                    <a href="#our-services">Wall Texture</a>
+                    <a href="#our-services">Waterproofing</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                © <span id="current-year">2026</span>
+                Daksha House Paint Service. All rights reserved.
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
